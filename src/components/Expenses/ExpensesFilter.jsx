@@ -9,12 +9,12 @@ function ExpensesFilter({ selected, onChangeFilter }) {
       <div className="expenses-filter__control">
         <label>Filter by year</label>
         <select value={selected} onChange={dropdownChangeHandler}>
-          <option value="2019">1398</option>
           <option value="2020">1399</option>
           <option value="2021">1400</option>
           <option value="2022">1401</option>
           <option value="2023">1402</option>
           <option value="2024">1403</option>
+          <option value="all">نمایش همه </option>
         </select>
       </div>
     </div>

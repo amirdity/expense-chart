@@ -21,13 +21,25 @@ const INITIAL_EXPENSES = [
     amount: 450,
     date: new Date(2021, 5, 12),
   },
+  {
+    id: "e4",
+    title: "New Desk (Wooden)",
+    amount: 450,
+    date: new Date(2023, 5, 12),
+  },
+  {
+    id: "e4",
+    title: "New Desk (Wooden)",
+    amount: 450,
+    date: new Date(2022, 5, 12),
+  },
 ];
 function App() {
   const [expenses, setExpenses] = useState(INITIAL_EXPENSES);
   function addExpenseHandler(expense) {
     setExpenses((prev) => {
-      return [ expense, ...prev];
-    })
+      return [expense, ...prev];
+    });
   }
   return (
     <div>
