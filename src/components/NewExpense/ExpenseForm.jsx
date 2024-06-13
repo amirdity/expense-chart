@@ -2,9 +2,6 @@ import { useState } from "react";
 import "./ExpenseForm.css";
 import PropTypes from "prop-types";
 function ExpenseForm({ onSaveExpenseData }) {
-  // const [enteredTitle, setEnteredTitle] = useState("");
-  // const [enteredAmount, setEnteredAmount] = useState("");
-  // const [enteredDate, setEnteredDate] = useState("");
   const [fromInput, setFormInput] = useState({
     textInput: "",
     amountInput: "",

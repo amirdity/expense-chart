@@ -1,14 +1,17 @@
-import './Chart.css'
-import ChartBar from './ChartBar';
-import PropTypes from 'prop-types';
+import "./Chart.css";
+import ChartBar from "./ChartBar";
+import PropTypes from "prop-types";
 function Chart({ dataPoints }) {
+  const dataPointValues = dataPoints.map((dataPoint) => dataPoint.value);
+  const totalMaximum = Math.max(...dataPointValues);
   return (
-    <div className="chart">
+    <div className="chart" key={Math.random()}>
       {dataPoints.map((dataPoint) => (
         <ChartBar
-          key={dataPoint.lable}
+          // key={dataPoint.lable}
+          key={Math.random()}
           value={dataPoint.value}
-          maxValue={null}
+          maxValue={totalMaximum}
           lable={dataPoint.lable}
         />
       ))}
@@ -16,6 +19,6 @@ function Chart({ dataPoints }) {
   );
 }
 Chart.propTypes = {
-  dataPoints: PropTypes.object
+  dataPoints: PropTypes.array,
 };
-export default Chart
+export default Chart;
